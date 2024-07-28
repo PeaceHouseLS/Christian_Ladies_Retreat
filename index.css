@@ -1,13 +1,12 @@
 body {
+    background: url('backgroundd.jpeg')  fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url('backgroundd.jpeg'); 
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    position: relative;
 }
 
 body::before {
@@ -18,39 +17,41 @@ body::before {
     right: 0;
     bottom: 0;
     background: inherit;
-    filter: blur(8px);
+    filter: blur(5px);
     z-index: -1;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    width: 70%;
+    height: 50vh;
+    /* max-width: 900px; */
 }
 
-h1 {
+.index-container {
+    text-align: center;
+}
+
+.index-container h1 {
     margin-bottom: 20px;
 }
 
-.btn {
-    margin: 5px;
-}
-
-.navigation {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 0.9em;
-}
-
-.navigation a {
-    color: #007bff;
+.index-container a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    margin-left: 10px;
+    border-radius: 5px;
 }
 
-.navigation a:hover {
-    text-decoration: underline;
+.index-container a:hover {
+    background-color: #0056b3;
 }
+
+

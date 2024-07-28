@@ -1,0 +1,19 @@
+
+.navigation {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.9em;
+}
+
+.navigation a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
