@@ -69,8 +69,10 @@ h1.subtitle {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     h1.title, h1.subtitle {
-        font-size: 1.5em; /* Adjusted for smaller screens */
+        font-size: 1em; /* Adjusted for smaller screens */
         padding: 0px;
+        margin: 0px;
+        font-weight: bold;
     }
 
 }
