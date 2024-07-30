@@ -69,14 +69,27 @@ h1.subtitle {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     h1.title, h1.subtitle {
-        font-size: 1em; /* Adjusted for smaller screens */
-        padding: 0px;
-        margin: 0px;
+        font-size: 1.2em; /* Adjusted for smaller screens */
         font-weight: bold;
+        
     }
 
+    h1.title{
+        padding: 10px;
+    }
     .container {
         padding: 0px;
     }
 
+    .reg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    a.btn{
+        width: 20%;
+        
+    }
 }
