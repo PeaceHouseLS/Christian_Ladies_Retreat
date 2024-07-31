@@ -31,7 +31,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
                 'Accept': 'application/json'
             }
         });
-
+        alert("Detected browser: " + browser);
         // Redirect immediately after initiating the fetch request
         window.location.href = 'success.html';
     } else {
