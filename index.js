@@ -1,10 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        if (form.checkValidity() === false) {
-            event.stopPropagation();
+document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        mode: 'cors',
+        headers: {
+            'Accept': 'application/json'
         }
-        form.classList.add('was-validated');
-    }, false);
+    });
+
+    // Redirect immediately after initiating the fetch request
+    window.location.href = 'success.html';
 });

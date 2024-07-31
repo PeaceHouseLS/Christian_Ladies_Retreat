@@ -136,3 +136,8 @@ input[type="date"]:focus {
     background-color: #ddd;
     text-decoration: none;
 }
+
+.avax{
+    padding: 0px 10px;
+    text-align: justify;
+}
