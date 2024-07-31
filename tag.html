@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Tag</title>
+    <script src="tag.js" defer></script>
+    <style>
+        /* Styling for the tag box */
+        .tag-box {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .tag-box h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 2px solid #4CAF50;
+        }
+        .tag-details p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .button-group {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .button-group button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+        .button-group button:hover {
+            background-color: #45a049;
+        }
+        /* Hide elements during printing */
+        @media print {
+            .button-group {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="tagOutput" class="tag-box" style="display: none;">
+        <h2>Christian Ladies Retreat 2024</h2>
+        <h3>Registration Tag</h3>
+        <img src="avatar.png" alt="Avatar" class="avatar" />
+        <div class="tag-details">
+            <p id="titlePosition"></p>
+            <p id="fullName"></p>
+            <br>
+            <p id="lga"></p>
+        </div>
+    </div>
+    <div class="button-group">
+        <button onclick="window.print();">Print</button>
+        <button onclick="goBack();">Back to Accreditation</button>
+    </div>
+
+</body>
+</html>
