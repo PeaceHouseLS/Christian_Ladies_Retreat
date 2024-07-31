@@ -13,3 +13,5 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
     // Redirect immediately after initiating the fetch request
     window.location.href = 'success.html';
 });
+
+
