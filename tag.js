@@ -18,16 +18,20 @@ window.onload = function() {
 
             // Map the data to a usable format
             const tableData = jsonData.map(row => ({
-                timestamp: new Date(row.c[0].v),
-                title: row.c[1].v,
-                fullName: row.c[2].v,
-                phoneNumber: row.c[3].v,
-                email: row.c[4].v,
-                church: row.c[5].v,
-                disciplerName: row.c[6].v,
-                phCode: row.c[7].v,
-                dob: row.c[8].v,
-                lga: row.c[9].v
+                timestamp: row.c[0] ? new Date(row.c[0].v) : null,
+                title: row.c[1] ? row.c[1].v : '',
+                fullName: row.c[2] ? row.c[2].v : '',
+                phoneNumber: row.c[3] ? row.c[3].v : '',
+                email: row.c[4] ? row.c[4].v : '',
+                church: row.c[5] ? row.c[5].v : '',
+                disciplerName: row.c[6] ? row.c[6].v : '',
+                phCode: row.c[7] ? row.c[7].v : '',
+                dob: row.c[8] ? row.c[8].v : '',
+                lga: row.c[9] ? row.c[9].v : '',
+                town: row.c[10] ? row.c[10].v : '',
+                occ: row.c[11] ? row.c[11].v : '',
+                chc: row.c[12] ? row.c[12].v : '',
+                have: row.c[13] ? row.c[13].v : '',
             }));
 
             // Find the matching record
