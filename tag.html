@@ -10,17 +10,23 @@
         .tag-box {
             border: 2px solid #4CAF50;
             padding: 20px;
-            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
             background-color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
+            width: 45%; /* Use 45% of the page width */
+            height: 45%; /* Use 45% of the page height */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            position: absolute; /* Position it absolutely */
+            top: 0; /* Align to top of the page */
+            left: 0; /* Align to left of the page */
+            margin: 10mm; /* Adjust margin to ensure it fits well within the page */
         }
         .tag-box h2 {
             color: #4CAF50;
             margin-top: 0;
+            font-size: 2em;
         }
         .avatar {
             width: 100px;
@@ -30,8 +36,8 @@
             border: 2px solid #4CAF50;
         }
         .tag-details p {
-            font-size: 16px;
-            margin: 5px 0;
+            font-size: 1.5em;
+            margin: 10px 0;
         }
         .button-group {
             margin: 20px auto;
@@ -51,8 +57,33 @@
         .button-group button:hover {
             background-color: #45a049;
         }
-        /* Hide elements during printing */
+        .container {
+            position: relative;
+            height: 297mm; /* A4 page height */
+            width: 210mm;  /* A4 page width */
+            padding: 0;
+            box-sizing: border-box; /* Include padding in the height */
+        }
+        /* Ensure layout fits within A4 dimensions for printing */
+        @page {
+            size: A4;
+            margin: 0; /* Remove default margins */
+        }
         @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                height: 297mm; /* A4 page height */
+                width: 210mm;  /* A4 page width */
+            }
+            .tag-box {
+                height: 45%; /* Use 45% of the page height */
+                width: 45%;  /* Use 45% of the page width */
+                margin: 10mm; /* Adjust margin to ensure it fits well within the page */
+                position: absolute; /* Position it absolutely */
+                top: 0; /* Align to top of the page */
+                left: 0; /* Align to left of the page */
+            }
             .button-group {
                 display: none;
             }
@@ -60,21 +91,55 @@
     </style>
 </head>
 <body>
-    <div id="tagOutput" class="tag-box" style="display: none;">
-        <h2>Christian Ladies Retreat 2024</h2>
-        <h3>Registration Tag</h3>
-        <img src="avatar.png" alt="Avatar" class="avatar" />
-        <div class="tag-details">
-            <p id="titlePosition"></p>
-            <p id="fullName"></p>
-            <br>
-            <p id="lga"></p>
+    <div class="container">
+        <div id="tagOutput1" class="tag-box" style="display: none;">
+            <h2>Christian Ladies Retreat 2024</h2>
+            <h3>Registration Tag</h3>
+            <img src="avatar.png" alt="Avatar" class="avatar" />
+            <div class="tag-details">
+                <p id="titlePosition1"></p>
+                <p id="fullName1"></p>
+                <br>
+                <p id="lga1"></p>
+            </div>
+        </div>
+        <div id="tagOutput2" class="tag-box" style="display: none;">
+            <h2>Christian Ladies Retreat 2024</h2>
+            <h3>Registration Tag</h3>
+            <img src="avatar.png" alt="Avatar" class="avatar" />
+            <div class="tag-details">
+                <p id="titlePosition2"></p>
+                <p id="fullName2"></p>
+                <br>
+                <p id="lga2"></p>
+            </div>
+        </div>
+        <div id="tagOutput3" class="tag-box" style="display: none;">
+            <h2>Christian Ladies Retreat 2024</h2>
+            <h3>Registration Tag</h3>
+            <img src="avatar.png" alt="Avatar" class="avatar" />
+            <div class="tag-details">
+                <p id="titlePosition3"></p>
+                <p id="fullName3"></p>
+                <br>
+                <p id="lga3"></p>
+            </div>
+        </div>
+        <div id="tagOutput4" class="tag-box" style="display: none;">
+            <h2>Christian Ladies Retreat 2024</h2>
+            <h3>Registration Tag</h3>
+            <img src="avatar.png" alt="Avatar" class="avatar" />
+            <div class="tag-details">
+                <p id="titlePosition4"></p>
+                <p id="fullName4"></p>
+                <br>
+                <p id="lga4"></p>
+            </div>
         </div>
     </div>
     <div class="button-group">
         <button onclick="window.print();">Print</button>
         <button onclick="goBack();">Back to Accreditation</button>
     </div>
-
 </body>
 </html>

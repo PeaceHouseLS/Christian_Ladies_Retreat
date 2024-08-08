@@ -38,18 +38,23 @@ window.onload = function() {
             const record = tableData.find(item => (item.phoneNumber + item.dob) === uniqueId);
 
             if (record) {
-                // Display the tag information
-                document.getElementById('titlePosition').innerText = `${record.title}`;
-                document.getElementById('fullName').innerText = `${record.fullName}`;
-                document.getElementById('lga').innerText = `${record.lga}`;
-                document.getElementById('tagOutput').style.display = 'block';
+                // Display the tag information for the first tag box
+                document.getElementById('titlePosition1').innerText = `${record.title}`;
+                document.getElementById('fullName1').innerText = `${record.fullName}`;
+                document.getElementById('lga1').innerText = `${record.lga}`;
+                document.getElementById('tagOutput1').style.display = 'block';
+
+                // Hide the remaining tag boxes
+                for (let i = 2; i <= 4; i++) {
+                    document.getElementById(`tagOutput${i}`).style.display = 'none';
+                }
             } else {
-                document.getElementById('tagOutput').innerHTML = '<p>Record not found.</p>';
+                document.querySelector('.container').innerHTML = '<p>Record not found.</p>';
             }
         })
         .catch(error => {
             console.error('Error fetching data:', error);
-            document.getElementById('tagOutput').innerHTML = '<p>Error fetching data.</p>';
+            document.querySelector('.container').innerHTML = '<p>Error fetching data.</p>';
         });
 };
 
